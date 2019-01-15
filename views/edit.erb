@@ -1,0 +1,26 @@
+<div class="post-post-wrapper">
+  <div class="container">
+    <form class="post-form" action="/post/<%= @edit['id'] %>/edit" method="post" enctype="multipart/form-data">
+      <!-- 日付 -->
+      <p>
+      <label for="date"><i class="far fa-calendar-alt"></i></label>
+      <input type="date" name="date" required="required" value="<%= @edit['post_date'] %>">
+      </p>
+      <!-- 写真 -->
+      <p>
+      <label for="image"><i class="far fa-image"></i></label>
+      <input type="file" name="image" required="required" value="<%= @edit['post_image'] %>">
+      </p>
+      <!-- メモ -->
+      <p>
+      <textarea name="description" rows="8" cols="80"><%= @edit['post_description'] %></textarea>
+      </p>
+      <!-- 送信ボタン -->
+      <p class="post-btn">
+      <input type="submit" class="btn btn-outline-success badge-pill btn-lg" value="記録する！">
+      </p>
+
+    </form>
+
+  </div>
+</div>

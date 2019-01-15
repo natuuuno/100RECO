@@ -1,0 +1,40 @@
+<!-- 投稿内容 -->
+<div class="post-post-wrapper">
+  <div class="container">
+    <form class="post-form" action="/post" method="post" enctype="multipart/form-data">
+      <!-- 日付 -->
+      <p>
+      <label for="date"><i class="far fa-calendar-alt"></i></label>
+      <input type="date" name="date" id="today" required="required">
+      </p>
+      <!-- 写真 -->
+      <p>
+      <label for="image"><i class="far fa-image"></i></label>
+      <input type="file" name="image" required="required">
+      </p>
+      <!-- メモ -->
+      <p>
+      <textarea name="description" rows="8" cols="80">コメント</textarea>
+      </p>
+      <!-- 送信ボタン -->
+      <p class="post-btn">
+      <input type="submit" class="btn btn-outline-success badge-pill btn-lg" value="記録する！">
+      </p>
+
+    </form>
+
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+  var date = new Date();
+
+       var yyyy = date.getFullYear();
+       var mm = ("0"+(date.getMonth()+1)).slice(-2);
+       var dd = ("0"+date.getDate()).slice(-2);
+
+   document.getElementById("today").value=yyyy+'-'+mm+'-'+dd;
+
+</script>

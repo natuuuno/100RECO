@@ -1,0 +1,49 @@
+<!-- トップページのヘッダー -->
+<div class="top-top-wrapper">
+  <div class="container">
+    <h1 class="top-title">＃<%= @about['user_title'] %></h1>
+    <h5 class="top-sub-title"><%= @about['user_sub_title'] %></h5>
+  </div>
+</div>
+
+<!-- ソート -->
+<div class="top-sort">
+  <div class="container">
+    <form action="/sort" method="post">
+      <label class="sort-btn">古い順 <i class="fas fa-sort-down"></i>
+        <input type="submit" name="order" value="asc" hidden>
+      </label>
+      <label class="sort-btn">新しい順 <i class="fas fa-sort-up"></i>
+        <input type="submit" name="order" value="desc" hidden>
+      </label>
+    </form>
+  </div>
+</div>
+
+<!-- 表示部分 -->
+<div class="top-main-wrapper">
+  <div class="container">
+    <!-- DBのデータを取得して表示する処理 -->
+    <% @posts.each do |post| %>
+      <div class="top-post col-5 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+        <img src="/image/<%= post['post_image'] %>" width="150px" height="150px">
+        <a href="/post/<%= post['id'] %>">
+          <p><%= post['post_date'] %></p>
+        </a>
+      </div>
+    <% end %>
+
+    <a href="/post"><i class="top-post-btn fas fa-plus-circle"></i></a>
+
+  </div>
+</div>
+
+
+<script type="text/javascript">
+$(function(){
+  $('.sort-btn').click(function(){
+    $('.active').removeClass('active');
+    $(this).addClass('active');
+  });
+});
+</script>

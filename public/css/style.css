@@ -1,0 +1,290 @@
+*{
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body{
+  background-color: #f5f5f5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  color: #404040;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+  margin: 0;
+}
+
+
+/* layout */
+/* heder */
+header{
+  height: 50px;
+  border-bottom: 1px solid #808080;
+  background-color: #ffffff;
+}
+
+.header-left{
+  float: left;
+}
+
+.header-logo{
+  display: inline-block;
+  font-size: 25px;
+  line-height: 50px;
+  font-family: 'Monoton', cursive;
+  cursor: pointer;
+  color: #606060;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.header-logo:hover{
+  color: #98d98e;
+  opacity: 1;
+}
+
+.header-right{
+  float: right;
+}
+
+.header-right li{
+  display: inline-block;
+  font-size: 25px;
+  line-height: 50px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.header-right i{
+  color: #606060;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.header-right i:hover{
+  color: #98d98e;
+  opacity: 1;
+}
+
+/* top */
+.top-top-wrapper{
+  text-align: center;
+  margin: 30px 0;
+}
+
+.top-title{
+  color: #404040;
+  margin-bottom: 10px;
+}
+
+.top-sub-title{
+  color: #404040;
+}
+
+.top-sort{
+  text-align: center;
+}
+
+.sort-btn{
+  display: inline-block;
+  margin-left: 20px;
+  padding: 0 10px;
+  color: #28a745;
+  border: solid 1px #28a745;
+  border-radius: 20px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.active{
+  color: #ffffff;
+  background-color: #28a745;
+}
+
+.sort-btn:hover{
+  color: #ffffff;
+  background-color: #28a745;
+}
+
+.top-main-wrapper{
+  margin-top: 30px;
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+
+.top-post{
+  float: left;
+  margin: 15px 0;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-post p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 150px;
+  height: 150px;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
+  font-size: 15px;
+}
+
+.top-post:hover p{
+  opacity: 1;
+  transition: all 1s ease;
+  padding-left: 25px;
+}
+
+.top-post-btn{
+  position: fixed;
+  bottom: 30px;
+  right: 80px;
+  font-size: 110px;
+  padding: 20px 0;
+  color: #98d98e;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.top-post-btn:hover{
+  opacity: 1;
+  font-size: 130px;
+}
+
+/* post */
+.post-post-wrapper{
+  margin: 50px 0;
+}
+
+.post-form{
+  margin: 20px;
+}
+
+.post-form p{
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.post-form i{
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+.post-btn{
+  margin-top: 50px;
+}
+
+/* detail */
+.detail-post-wrapper{
+  padding-top: 80px;
+}
+
+.detail-left{
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.detail-right{
+  float: right;
+  width: 50%;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.detail-right h1{
+  font-family: 'Black Ops One', cursive;
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+
+.detail-right p{
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.detail-btn{
+  float: right;
+  margin: 0 30px;
+}
+
+.detail-btn input{
+  cursor: pointer;
+}
+
+.edit-btn{
+  float: right;
+}
+
+
+/* edit_message */
+.edit_message p{
+  margin: 100px 0 60px 20px;
+  font-size: 30px;
+  color: #d92b42;
+}
+
+.edit_message a{
+  display: inline-block;
+  margin: 60px 0 60px 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #28a745;
+  border: solid 1px #28a745;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+.edit_message a:hover{
+  color: #ffffff;
+  background-color: #28a745;
+}
+
+/* setting */
+.setting-top-wrapper h1{
+  margin: 50px 0;
+  margin-left: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+.setting-post-wrapper{
+  text-align: center;
+}
+
+.setting-form p{
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+  margin-left: 20px;
+}
+
+.setting-user{
+  width: 50%;
+}
+
+.setting-message{
+  color: #d92b42;
+}
+
+.setting-btn{
+  display: inline-block;
+  width: 60%;
+  margin: 20px;
+}

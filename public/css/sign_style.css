@@ -1,0 +1,96 @@
+html, body {border: 0; margin: 0; padding: 0;}
+body {font: 14px "Lato", Arial, sans-serif; min-width: 100%; min-height: 100%; color: #666;}
+.container{margin: 0 auto; max-width: 1200px;}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+.row{float: left; width: 100%; padding: 20px 0 50px;}
+h2{text-align: center; color: #2079df; font-size: 28px; float: left; width: 100%; margin: 30px 0; position: relative; line-height: 58px; font-weight: 400;}
+h2:before{content: ""; position: absolute; left: 50%; bottom: 0; width: 100px; height: 2px; background-color: #2079df; margin-left: -50px;}
+
+
+/* signin */
+.left{
+  float: left;
+  width: 50%;
+  padding: 15px;
+  background-color: #98d98e;
+  height: 100vh;
+  text-align: center;
+}
+
+.title{
+  margin-top: 120px;
+  font-family: 'Monoton', cursive;
+  color: #ffffff;
+}
+
+.title-up{
+  font-size: 220px;
+}
+
+.title-down{
+  font-size: 130px;
+}
+
+.right{
+  float: right;
+  width: 50%;
+  padding: 15px;
+  background-color: white;
+  height: 100vh;
+  text-align: center;
+}
+
+.right-text{
+  margin-top: 180px;
+}
+
+.signin-form{
+  margin: 50px 0;
+}
+
+:focus{outline: none;}
+
+.col-3{float: left; width: 27.33%; margin: 40px 3%; position: relative; padding: 0;} /* necessary to give position: relative to parent. */
+input[type="text"]{font: 15px/24px ; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+input[type="password"]{font: 15px/24px ; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+input[type="submit"]{font: 15px/24px ; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+
+.effect-7{border: 1px solid #ccc; padding: 7px 14px 9px; transition: 0.4s;}
+
+.effect-7 ~ .focus-border:before,
+.effect-7 ~ .focus-border:after{content: ""; position: absolute; top: 0; left: 50%; width: 0; height: 2px; background-color: #3399FF; transition: 0.4s;}
+.effect-7 ~ .focus-border:after{top: auto; bottom: 0;}
+.effect-7 ~ .focus-border i:before,
+.effect-7 ~ .focus-border i:after{content: ""; position: absolute; top: 50%; left: 0; width: 2px; height: 0; background-color: #3399FF; transition: 0.6s;}
+.effect-7 ~ .focus-border i:after{left: auto; right: 0;}
+.effect-7:focus ~ .focus-border:before,
+.effect-7:focus ~ .focus-border:after{left: 0; width: 100%; transition: 0.4s;}
+.effect-7:focus ~ .focus-border i:before,
+.effect-7:focus ~ .focus-border i:after{top: 0; height: 100%; transition: 0.6s;}
+
+.btn-secondary{padding: 7px 14px 9px; transition: 0.4s; cursor: pointer;}
+
+.sign-message{
+  display: inline-block;
+  font-size: 20px;
+  color: red;
+}
+
+.form-footer{
+  display: inline-block;
+}
+
+/* signup */
+.signup-title{
+  text-align: center;
+  margin-top: 150px;
+}
+
+.signup{
+  text-align: center;
+  width: 100%;
+}
+
+.signup-form{
+  margin-top: 50px;
+}

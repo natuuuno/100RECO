@@ -1,0 +1,25 @@
+<!-- 投稿内容 -->
+<div class="detail-post-wrapper">
+  <div class="container">
+    <div class="detail-left">
+      <img src="/image/<%= @detail['post_image'] %>" width="500px" height="500px">
+    </div>
+    <div class="detail-right">
+      <h1><%= @detail['post_date'] %></h1>
+      <p><%= @detail['post_description'] %></p>
+    </div>
+    <div class="detail-btn">
+      <form action="/post/<%= @detail['id'] %>/delete" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="hidden" name="id" value="<%= @detail['id'] %>">
+        <input type="hidden" name="post_image" value="<%= @detail['post_image'] %>">
+        <input type="submit" class="btn btn-outline-danger badge-pill"value="投稿を削除">
+      </form>
+    </div>
+    <div class="edit-btn">
+      <a href="/post/<%= @detail['id'] %>/edit">
+        <input type="submit" class="btn btn-outline-success badge-pill"value="編集">
+      </a>
+    </div>
+  </div>
+</div>

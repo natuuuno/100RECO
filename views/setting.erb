@@ -1,0 +1,25 @@
+<div class="setting-top-wrapper">
+  <div class="container">
+    <h1>設定</h1>
+  </div>
+</div>
+
+<div class="setting-post-wrapper">
+  <div class="container">
+    <!-- 今の設定を取得 -->
+    <form class="setting-form" action="/setting" method="post">
+      <p><label for="user_name">ユーザー名：</label>
+         <input class="setting-user" type="text" name="user_name" value="<%= @setting['user_name'] %>"></p>
+      <p><label for="user_title">アルバム名：</label>
+         <input class="setting-user" type="text" name="user_title" value="<%= @setting['user_title'] %>"></p>
+      <p><label for="user_sub_title">説明：</label>
+         <input class="setting-user" type="text" name="user_sub_title" value="<%= @setting['user_sub_title'] %>"></p>
+      <p class="setting-message"><%= @setting_message %></p>
+
+      <input class="setting-btn btn-outline-primary badge-pill btn-lg" type="submit" value="変更を保存！">
+    </form>
+
+    <a href="/signout"><input class="setting-btn btn-outline-danger badge-pill btn-lg" type="button" value="ログアウト"></a>
+
+  </div>
+</div>
